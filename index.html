@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Marketplace</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="stylesheet" href="style.css">
+    <script src="js/main.js" defer></script>
+</head>
+<body class="min-h-[100vh] flex flex-col justify-between bg-[#25274D] text-white py-2 px-4">
+    <header class="">
+        <!-- <a href="" class="mr-0 ml-auto">დაამატე შენი მაღაზია</a> -->
+        <div class="flex justify-between items-center">
+            
+            <a class="text-xl" href="/">
+                Marketplace
+            </a>
+            <img id="show-category" class="cursor-pointer" src="https://img.icons8.com/?size=100&id=82853&format=png&color=ffffff" alt="" width="30">
+            <img id="close-category" class="cursor-pointer hidden" src="https://img.icons8.com/?size=100&id=82826&format=png&color=ffffff" alt="" width="30">
+            <form class="bg-white w-[50%] text-black flex rounded-full h-[40px]" action="search">
+                <input class="w-[80%] px-4" type="text" placeholder="ჩაწერეთ საძიებო სიტყვა">
+                <button class="bg-black text-white rounded-full w-[20%]" type="submit">ძებნა</button>
+            </form>
+            <div class="flex gap-4">
+                <a href="">
+                    <img class="m-auto" src="https://img.icons8.com/?size=100&id=86280&format=png&color=ffffff" alt="" width="30">
+                    <p class="text-xs">შესვლა</p>
+                </a>
+                <a href="">
+                    <img class="m-auto" src="https://img.icons8.com/?size=100&id=59997&format=png&color=ffffff" alt="" width="30">
+                    <p class="text-xs">კალათა</p>
+                </a>
+                <!-- <a href=""></a>
+                <a href=""></a>
+                <a href=""></a> -->
+            </div>
+        </div>
+    </header>
+    <main>
+        <div id="category-container" class="w-full h-[85vh] bg-[rgba(70,72,102,0.2)] z-10 hidden">
+            <div id="category-menu" class="w-fit h-full bg-[#25274D] border border-[#464866] flex flex-col justify-between py-4">
+                <div class="flex gap-2 px-4 text-center items-center hover:bg-[#464866] cursor-pointer">
+                    <img class="w-[20px] h-[20px]" src="https://img.icons8.com/?size=100&id=86280&format=png&color=ffffff" alt="" width="20" height="20">
+                    <p>ქალი</p>
+                </div>
+                <div class="flex gap-2 px-4 text-center items-center hover:bg-[#464866] cursor-pointer">
+                    <img class="w-[20px] h-[20px]" src="https://img.icons8.com/?size=100&id=86280&format=png&color=ffffff" alt="" width="20" height="20">
+                    <p>ფეხსაცმელი</p>
+                </div>
+                <div class="flex gap-2 px-4 text-center items-center hover:bg-[#464866] cursor-pointer">
+                    <img class="w-[20px] h-[20px]" src="https://img.icons8.com/?size=100&id=86280&format=png&color=ffffff" alt="" width="20" height="20">
+                    <p>ბავშვი</p>
+                </div>
+                <div class="flex gap-2 px-4 text-center items-center hover:bg-[#464866] cursor-pointer">
+                    <img class="w-[20px] h-[20px]" src="https://img.icons8.com/?size=100&id=86280&format=png&color=ffffff" alt="" width="20" height="20">
+                    <p>მამაკაცი</p>
+                </div>
+                <div class="flex gap-2 px-4 text-center items-center hover:bg-[#464866] cursor-pointer">
+                    <img class="w-[20px] h-[20px]" src="https://img.icons8.com/?size=100&id=86280&format=png&color=ffffff" alt="" width="20" height="20">
+                    <p>სახლი</p>
+                </div>
+                <div class="flex gap-2 px-4 text-center items-center hover:bg-[#464866] cursor-pointer">
+                    <img class="w-[20px] h-[20px]" src="https://img.icons8.com/?size=100&id=86280&format=png&color=ffffff" alt="" width="20" height="20">
+                    <p>სილამაზე</p>
+                </div>
+                <div class="flex gap-2 px-4 text-center items-center hover:bg-[#464866] cursor-pointer">
+                    <img class="w-[20px] h-[20px]" src="https://img.icons8.com/?size=100&id=86280&format=png&color=ffffff" alt="" width="20" height="20">
+                    <p>აქსესუარი</p>
+                </div>
+                <div class="flex gap-2 px-4 text-center items-center hover:bg-[#464866] cursor-pointer">
+                    <img class="w-[20px] h-[20px]" src="https://img.icons8.com/?size=100&id=86280&format=png&color=ffffff" alt="" width="20" height="20">
+                    <p>ელექტრონიკა</p>
+                </div>
+                <div class="flex gap-2 px-4 text-center items-center hover:bg-[#464866] cursor-pointer">
+                    <img class="w-[20px] h-[20px]" src="https://img.icons8.com/?size=100&id=86280&format=png&color=ffffff" alt="" width="20" height="20">
+                    <p>სათამაშო</p>
+                </div>
+                <div class="flex gap-2 px-4 text-center items-center hover:bg-[#464866] cursor-pointer">
+                    <img class="w-[20px] h-[20px]" src="https://img.icons8.com/?size=100&id=86280&format=png&color=ffffff" alt="" width="20" height="20">
+                    <p>ავეჯი</p>
+                </div>
+                <div class="flex gap-2 px-4 text-center items-center hover:bg-[#464866] cursor-pointer">
+                    <img class="w-[20px] h-[20px]" src="https://img.icons8.com/?size=100&id=86280&format=png&color=ffffff" alt="" width="20" height="20">
+                    <p>პროდუქტი</p>
+                </div>
+                <div class="flex gap-2 px-4 text-center items-center hover:bg-[#464866] cursor-pointer">
+                    <img class="w-[20px] h-[20px]" src="https://img.icons8.com/?size=100&id=86280&format=png&color=ffffff" alt="" width="20" height="20">
+                    <p>საყოფაცხოვრებო ტექნიკა</p>
+                </div>
+                <div class="flex gap-2 px-4 text-center items-center hover:bg-[#464866] cursor-pointer">
+                    <img class="w-[20px] h-[20px]" src="https://img.icons8.com/?size=100&id=86280&format=png&color=ffffff" alt="" width="20" height="20">
+                    <p>ზოო საქონელი</p>
+                </div>
+                <div class="flex gap-2 px-4 text-center items-center hover:bg-[#464866] cursor-pointer">
+                    <img class="w-[20px] h-[20px]" src="https://img.icons8.com/?size=100&id=86280&format=png&color=ffffff" alt="" width="20" height="20">
+                    <p>სპორტი</p>
+                </div>
+                <div class="flex gap-2 px-4 text-center items-center hover:bg-[#464866] cursor-pointer">
+                    <img class="w-[20px] h-[20px]" src="https://img.icons8.com/?size=100&id=86280&format=png&color=ffffff" alt="" width="20" height="20">
+                    <p>ავტონაწილები</p>
+                </div>
+                <div class="flex gap-2 px-4 text-center items-center hover:bg-[#464866] cursor-pointer">
+                    <img class="w-[20px] h-[20px]" src="https://img.icons8.com/?size=100&id=86280&format=png&color=ffffff" alt="" width="20" height="20">
+                    <p>წიგნები</p>
+                </div>
+                <div class="flex gap-2 px-4 text-center items-center hover:bg-[#464866] cursor-pointer">
+                    <img class="w-[20px] h-[20px]" src="https://img.icons8.com/?size=100&id=86280&format=png&color=ffffff" alt="" width="20" height="20">
+                    <p>საიუველირო</p>
+                </div>
+                <div class="flex gap-2 px-4 text-center items-center hover:bg-[#464866] cursor-pointer">
+                    <img class="w-[20px] h-[20px]" src="https://img.icons8.com/?size=100&id=86280&format=png&color=ffffff" alt="" width="20" height="20">
+                    <p>რემონტი</p>
+                </div>
+                <div class="flex gap-2 px-4 text-center items-center hover:bg-[#464866] cursor-pointer">
+                    <img class="w-[20px] h-[20px]" src="https://img.icons8.com/?size=100&id=86280&format=png&color=ffffff" alt="" width="20" height="20">
+                    <p>ბაღი და სახლი</p>
+                </div>
+                <div class="flex gap-2 px-4 text-center items-center hover:bg-[#464866] cursor-pointer">
+                    <img class="w-[20px] h-[20px]" src="https://img.icons8.com/?size=100&id=86280&format=png&color=ffffff" alt="" width="20" height="20">
+                    <p>ჯანმრთელობა</p>
+                </div>
+                <div class="flex gap-2 px-4 text-center items-center hover:bg-[#464866] cursor-pointer">
+                    <img class="w-[20px] h-[20px]" src="https://img.icons8.com/?size=100&id=86280&format=png&color=ffffff" alt="" width="20" height="20">
+                    <p>კანცელარია</p>
+                </div>
+                
+            </div>
+        </div>
+    </main>
+    
+    <footer>
+        &copy; 2025 - Levon Zaxarian
+    </footer>
+    
+</body>
+</html>
